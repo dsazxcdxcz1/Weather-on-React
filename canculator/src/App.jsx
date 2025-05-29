@@ -41,6 +41,31 @@ function App() {
     }, []);
 
     useEffect(() => {
+        if (!location) return
+         async function searchGeo(){
+            try{
+                if(inputValue === ''){
+                    const responseGeo  = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location.lat},${location.lon}&days=5`)
+                    setGeo(responseGeo)
+                    console.log(responseGeo)
+                } else{
+                    setTimeout(() => {
+                        const searchGeo = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${inputValue}&days=5`)
+                        setGeo(searchGeo)
+                    }, 500)
+                }
+            } catch (error) {
+                if (error.response || error.response.status === 400) {
+                    console.debug('не верное название города!', error)
+                }
+
+            }
+        }
+        searchGeo()
+    }, [inputValue, location]);
+
+
+    useEffect(() => {
         if(!location || !info)return
 
 
