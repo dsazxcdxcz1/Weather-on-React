@@ -1,0 +1,38 @@
+.forecastDayContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+    gap: 2vw;
+}
+
+.forecastDay{
+    background-color: rgba(255, 255, 255, 0.35);
+    width: 165px;
+    height: 213px;
+    border-radius: 30px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease ;
+    transform: scale(1);
+}
+.forecastDay:hover{
+    transform: scale(1.1);
+}
+
+.infoForecastDayContainer{
+    display: flex;
+    flex-direction: column;
+    align-content:  center;
+    color: white;
+    justify-content: center;
+    gap: 10px;
+}
+
+.infoForecastDayContainer img {
+    margin-left: 1.2vw;
+}
+.infoForecastDayContainer h4{
+    margin-left: 1.5vw;
+}

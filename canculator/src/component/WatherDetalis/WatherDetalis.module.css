@@ -1,0 +1,47 @@
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 5vh;
+}
+.mainItem{
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    height: 247px;
+    width: 710px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.Pressure{
+    display: flex;
+    gap: 9vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 5vh;
+}
+
+.Humidity{
+    display: flex;
+    gap: 10vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+}
+.CityWeather{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.CityContainer{
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    width: 348px;
+    height: 247px;
+    color: rgba(255, 255, 255, 1);
+}
+.City{
+    display: flex;
+    padding-top: 2vh;
+    justify-content: center;
+}

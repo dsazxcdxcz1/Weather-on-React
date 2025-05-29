@@ -1,0 +1,57 @@
+body{
+background-color: rgba(108, 182, 192, 1);
+  overflow: hidden;
+}
+.containerInput{
+  display: flex;
+}
+.inputContainer {
+  position: relative;
+  width: 424px;
+  margin: 10vh auto 0 auto;
+}
+input{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 20px;
+  opacity: 0.5;
+  font-size: 16px;
+}
+.searchIconButton{
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchIconImg {
+  width: 20px;
+  height: 20px;
+}
+
+.sun{
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none; /*с помошу этого свойства элемент становиться прозрачным для мыши */
+}
+.cloudOne{
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+.cloudTwo{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  pointer-events: none;
+}

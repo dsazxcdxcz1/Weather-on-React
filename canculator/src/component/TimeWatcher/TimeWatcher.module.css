@@ -1,0 +1,25 @@
+.timeContainer{
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.timeNavigation{
+    background-color: rgba(255, 255, 255, 0.35);
+    width: 936px;
+    height: 156px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5vw;
+}
+.timeItem{
+    margin-left: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+
