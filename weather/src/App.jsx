@@ -7,7 +7,7 @@ import ForecastDay from "./component/ForecastDay/ForecastDay.jsx";
 
 function App() {
 
-    const apiKey = "60a216ed0a8342d39ce100030252205"
+    const apiKey = "1e97e996c1714a7888e183114250506"
 
     const [location, setLocation] = useState(null);
 
@@ -49,12 +49,12 @@ function App() {
          async function searchGeo(){
             try{
                 if(inputValue === ''){
-                    const responseGeo  = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location.lat},${location.lon}&days=5`)
+                    const responseGeo  = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location.lat},${location.lon}&days=7`)
                     setGeo(responseGeo)
                     console.log(responseGeo)
                 } else{
                     setTimeout(() => {
-                        const searchGeo = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${inputValue}&days=5`)
+                        const searchGeo = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${inputValue}&days=7`)
                         setGeo(searchGeo)
                     }, 500)
                 }
@@ -116,7 +116,7 @@ function App() {
         </div>
         <div className="inputContainer">
             <input type="text"
-                   placeholder="Ведите название города"
+                   placeholder="Enter the name of the city"
                    value={inputValue}
                    onChange={(e)=>{setInputValue(e.target.value)}}
             />

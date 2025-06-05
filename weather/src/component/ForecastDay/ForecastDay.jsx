@@ -5,9 +5,9 @@ import './ForecastDay.css';
 const ForecastDay = ({ weather, cloudy }) => {
     return (
         <div className="forecastDayContainer">
-            {[0, 1, 2, 3].map((i) => {
+            {weather.forecast.forecastday.slice(1, 5).map((_, i) => {
                 const dateObj = new Date();
-                dateObj.setDate(dateObj.getDate() + i + 1); // +1, +2, +3, +4
+                dateObj.setDate(dateObj.getDate() + i + 1);
 
                 const day = String(dateObj.getDate()).padStart(2, '0');
                 const month = String(dateObj.getMonth() + 1).padStart(2, '0');

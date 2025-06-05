@@ -34,15 +34,17 @@ const InfoForecastDay = ({weather, forecastDay, date, cloudy}) => {
         } else if (tomorrowWeather.day.daily_chance_of_rain === 0 || cloudy === 0) {
             setImgSet('sun.png');
         }
-    }, [tomorrowWeather, cloudy])
+        console.log('я отработал')
+
+    }, [tomorrowWeather, cloudy,  weather])
 
 
 
     return (
         <div  className={"infoForecastDayContainer"}>
-            <p>Ночь: {night}℃</p>
-            <h4>День:</h4>
-            <img src={`/img/${imgSet}`} alt="cloudy" style={{ width: "55px", height: "55px" }} />
+            <p>Night: {night}℃</p>
+            <h4>Day:</h4>
+            <img src={`/img/${imgSet}`} alt="weather icon" style={{ width: "55px", height: "55px" }} />
             <h4>{dayTime}℃</h4>
             <h4>{date}</h4>
         </div>
